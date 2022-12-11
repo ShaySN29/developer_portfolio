@@ -22,7 +22,7 @@ const marginStyle = {
 
 export default () => (
 	<div>
-	<Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-6XVPF93GLZ"/>
+	<Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=UA-251751334-2"/>
 	<Script
 		id="google-analytics"
 			strategy="afterInteractive"
@@ -31,9 +31,7 @@ export default () => (
 				window.dataLayer = window.dataLayer || [],
 				function gtag(){dataLayer.push(arguments)},
 				gtag('js', new Date());
-				gtag('config', 'G-6XVPF93GLZ', {
-					page_path: window.location.pathname,
-				});
+				gtag('config', 'UA-251751334-2');
 				`,
 			}}
 	/>
