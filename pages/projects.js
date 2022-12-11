@@ -81,6 +81,15 @@ export default () => (
         </p>
         <a href='https://github.com/ShaySN29/Todo-List' target="_blank" style={linkStyle}>GitHub - Todo List</a>
       </div>
+
+      <div style={marginStyle}>
+        <h2>Missing Person database App</h2>
+          <p style={paragraphStyle}>
+            An app built using the MERN (MongoDB - Express.js - React - Node.js) stack where a user logs in as an admin or user. An admin user can create,
+            update or delete from the missing person list or update the admin rights of a user. The user can view the missing person list.
+          </p>
+          <a href='https://github.com/ShaySN29/Missing-Person-Database' target="'_blank" style={linkStyle}>Github - Missing Person Database</a>
+      </div>
     </div>
   </Layout>
 );
