@@ -22,28 +22,26 @@ const marginStyle = {
 
 export default () => (
 	<div>
-	<Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=UA-251751334-2"/>
-	<Script
-		id="google-analytics"
-			strategy="afterInteractive"
-			dangerouslySetInnerHTML={{
-				_html: `
-				window.dataLayer = window.dataLayer || [],
-				function gtag(){dataLayer.push(arguments)},
-				gtag('js', new Date());
-				gtag('config', 'UA-251751334-2');
-				`,
-			}}
-	/>
+		<Script strategy="lazyOnload" src="https://www.googletagmanager.com/gtag/js?id=G-6XVPF93GLZ"/>
+		<Script strategy="'lazyOnload">
+			{`
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments)}
+					gtag('js', new Date());
+					gtag('config', 'G-6XVPF93GLZ', {
+						page_path: window.location.pathname,
+					});
+					`}
+		</Script>
 		
-	<Layout >
-		<div style={homeStyle} >
-			<h1 style={marginStyle}>Hello! I am Shanay!</h1>
-			<Image src={img_shanay} width={200} />
-			<p style={marginStyle}>
-				I am a Forensic Science Analyst and an aspiring Web Developer...
-			</p>
-		</div>
-	</Layout>
+		<Layout >
+			<div style={homeStyle} >
+				<h1 style={marginStyle}>Hello! I am Shanay!</h1>
+				<Image src={img_shanay} width={200} />
+				<p style={marginStyle}>
+					I am a Forensic Science Analyst and an aspiring Web Developer...
+				</p>
+			</div>
+		</Layout>
 	</div>
 );
