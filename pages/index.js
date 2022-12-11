@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Script from "next/script";
 import Layout from '../components/MyLayout';
 import img_shanay from '../static/images/img_shanay.jpg'; // Importing the img 
 import Image from 'next/image';
@@ -20,6 +21,23 @@ const marginStyle = {
 
 
 export default () => (
+	<div>
+	<Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-6XVPF93GLZ"/>
+	<Script
+		id="google-analytics"
+			strategy="afterInteractive"
+			dangerouslySetInnerHTML={{
+				_html: `
+				window.dataLayer = window.dataLayer || [],
+				function gtag(){dataLayer.push(arguments)},
+				gtag('js', new Date());
+				gtag('config', 'G-6XVPF93GLZ', {
+					page_path: window.location.pathname,
+				});
+				`,
+			}}
+	/>
+		
 	<Layout >
 		<div style={homeStyle} >
 			<h1 style={marginStyle}>Hello! I am Shanay!</h1>
@@ -29,4 +47,5 @@ export default () => (
 			</p>
 		</div>
 	</Layout>
+	</div>
 );
