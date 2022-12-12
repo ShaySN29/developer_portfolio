@@ -22,16 +22,20 @@ const marginStyle = {
 
 export default () => (
 	<div>
-		<Script strategy="lazyOnload" src="https://www.googletagmanager.com/gtag/js?id=G-6XVPF93GLZ"/>
-		<Script strategy="'lazyOnload">
+		<Script
+			strategy="afterInteractive"
+			src="https://www.googletagmanager.com/gtag/js?id=G-6XVPF93GLZ"
+		/>
+		
+		<Script strategy="afterInteractive">
 			{`
-					window.dataLayer = window.dataLayer || [];
-					function gtag(){dataLayer.push(arguments)}
-					gtag('js', new Date());
-					gtag('config', 'G-6XVPF93GLZ', {
-						page_path: window.location.pathname,
-					});
-					`}
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments)}
+				gtag('js', new Date());
+				gtag('config', 'G-6XVPF93GLZ', {
+					page_path: window.location.pathname,
+				});
+			`}
 		</Script>
 		
 		<Layout >
